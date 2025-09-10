@@ -72,14 +72,6 @@ Improve weight tracking adoption (smart scale integration, easier logging)
 
 Personalize heart rate insights for fitness and stress management
 
-📂 Repository Structure
-bellabeat-case-study/
-├── scripts/           # R scripts for cleaning & analysis
-├── outputs/           # Charts (PNG) & summary tables (CSV)
-├── report/            # Word report, PDF, and PowerPoint presentation
-├── README.md          # Project overview
-└── .gitignore         # Excludes raw data & temp files
-
 📜 License
 
 This project is for educational purposes as part of the Google Data Analytics Capstone.
