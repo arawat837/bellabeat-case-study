@@ -1,114 +1,87 @@
-\# Bellabeat Case Study – Google Data Analytics Capstone
+ Bellabeat Case Study – Google Data Analytics Capstone
+📌 Project Overview
 
+This project analyzes Fitbit fitness tracker data to uncover trends in daily activity, sleep, calories, weight, and heart rate.
 
+The goal is to generate insights and provide actionable recommendations for Bellabeat, a high-tech company that manufactures health-focused smart devices for women.
 
-\## 📌 Project Overview
+The case study follows the Google Data Analytics Capstone framework:
+Ask → Prepare → Process → Analyze → Share → Act
 
-This project analyzes \*\*Fitbit fitness tracker data\*\* to uncover trends in user activity, sleep, calories, weight, and heart rate.  
+📊 Dataset
 
-The goal is to generate insights and provide \*\*actionable recommendations\*\* for Bellabeat, a high-tech company that manufactures health-focused smart devices for women.
+Source: Fitbit Fitness Tracker Dataset on Kaggle
 
+Users: 33 unique individuals
 
+Timeframe: March–May 2016
 
-The case study follows the \*\*Google Data Analytics Capstone framework\*\*:  
+Note:
 
-\*\*Ask → Prepare → Process → Analyze → Share → Act\*\*
+❌ Raw data is not included in this repository due to size.
 
+Please download directly from Kaggle to reproduce the analysis.
 
+This repo contains only scripts, outputs (charts/tables), and the final report/presentation.
 
----
+🛠️ Tools & Methods
 
+Tools: RStudio
 
+Packages: tidyverse, lubridate, ggplot2, janitor, skimr
 
-\## 📊 Dataset
+Steps:
 
-\- \*\*Source:\*\* \[Fitbit Fitness Tracker Dataset on Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit)  
+Parsed and standardized date/time columns
 
-\- \*\*Users:\*\* 33 unique individuals  
+Removed duplicates
 
-\- \*\*Timeframe:\*\* March–May 2016  
+Aggregated sleep (minute → daily totals)
 
-\- \*\*Important:\*\*  
+Aggregated heart rate (seconds → daily averages)
 
-&nbsp; - ❌ Raw data is \*\*not included in this repository\*\* (due to size).  
+Merged datasets by User ID + Date
 
-&nbsp; - To reproduce analysis, please download the dataset directly from Kaggle.  
+Exported cleaned summaries → used for visualization & analysis
 
-&nbsp; - This repo contains \*\*only scripts, visual outputs, and the final report/presentation\*\*.
+🔍 Key Findings
 
+Daily Activity: Average steps < 10,000/day; activity higher on weekdays than weekends.
 
+Calories vs Steps: Strong positive correlation → steps are a reliable predictor of calorie burn.
 
----
+Sleep Patterns: Average sleep = 5–7 hrs/night (below recommended 7–8 hrs). Weak positive link with steps.
 
+Activity Intensity: Majority of user time is sedentary.
 
+Weight Tracking: Very few users log weight or BMI consistently.
 
-\## 🛠️ Tools \& Methods
+Heart Rate: Group averages stable, but individual variability suggests personalization opportunities.
 
-\- \*\*Tools:\*\* RStudio  
+✅ Recommendations
 
-\- \*\*Libraries:\*\* tidyverse, lubridate, ggplot2, janitor, skimr  
+Encourage daily movement with step reminders & challenges
 
-\- \*\*Data Preparation Steps:\*\*  
+Promote active breaks to reduce sedentary time
 
-&nbsp; - Parsed and standardized date/time columns  
+Enhance sleep coaching features (bedtime reminders, tips, insights)
 
-&nbsp; - Removed duplicates  
+Boost weekend activity with gamified challenges
 
-&nbsp; - Aggregated sleep (minute → daily)  
+Improve weight tracking adoption (smart scale integration, easier logging)
 
-&nbsp; - Aggregated heart rate (seconds → daily average)  
+Personalize heart rate insights for fitness and stress management
 
-&nbsp; - Merged datasets by User ID and Date  
+📂 Repository Structure
+bellabeat-case-study/
+├── scripts/           # R scripts for cleaning & analysis
+├── outputs/           # Charts (PNG) & summary tables (CSV)
+├── report/            # Word report, PDF, and PowerPoint presentation
+├── README.md          # Project overview
+└── .gitignore         # Excludes raw data & temp files
 
-&nbsp; - Exported cleaned/aggregated results to CSV and used for analysis  
+📜 License
 
-
-
----
-
-
-
-\## 🔍 Key Findings
-
-1\. \*\*Daily Activity:\*\* Users average < 10,000 steps/day; activity higher on weekdays.  
-
-2\. \*\*Calories vs Steps:\*\* Strong positive correlation → steps are reliable calorie predictor.  
-
-3\. \*\*Sleep Patterns:\*\* Avg 5–7 hrs/night, below recommended 7–8 hrs. Weak positive correlation with steps.  
-
-4\. \*\*Activity Intensity:\*\* Majority of time spent sedentary.  
-
-5\. \*\*Weight Tracking:\*\* Very few users log weight/BMI consistently.  
-
-6\. \*\*Heart Rate:\*\* Population averages stable, but individual variability suggests potential for personalization.  
-
-
-
----
-
-
-
-\## ✅ Recommendations
-
-\- Encourage \*\*daily movement\*\* with step reminders \& challenges.  
-
-\- Promote \*\*active breaks\*\* to reduce sedentary time.  
-
-\- Enhance \*\*sleep coaching features\*\* with reminders \& insights.  
-
-\- Boost \*\*weekend activity\*\* with gamified challenges.  
-
-\- Improve \*\*weight tracking adoption\*\* (smart scale integration).  
-
-\- Personalize \*\*heart rate insights\*\* for fitness and stress management.  
-
-
-
----
-
-
-
-\## 📂 Repository Structure
-
-
-
+This project is for educational purposes as part of the Google Data Analytics Capstone.
+Dataset © Fitbit via Kaggle.
+Code, outputs, and documentation are released under the MIT License.
